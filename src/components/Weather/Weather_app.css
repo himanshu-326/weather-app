@@ -22,7 +22,8 @@
 .map{
     position: absolute;
     left: 10px;
-    font-size: 28px;   
+    font-size: 22px;  
+    padding-top: 5px; 
 }
 
 .search-box input{
@@ -45,7 +46,7 @@
     text-transform: capitalize;
 }
 
-.search-box button{
+button{
     position: absolute;
     right: 0;
     width: 40px;
@@ -53,14 +54,10 @@
     background:transparent;
     border: none;
     outline: none;
-    font-size: 28px;
+    font-size: 22px;
     color: #fff;
-    padding: 0 40px 0 5px;
+    padding: 7px 40px 0 5px;
     cursor: pointer;
-}
-
-.city-hide{
-    display: none;
 }
 
 .weather-box{
@@ -69,8 +66,11 @@
     /* padding-left: 60px; */
 }
 
-.weather-box img{
-    width: 60%;
+.new-image{
+    height: 164px;
+    width: 213px;
+    background-size:contain;
+    padding-right: 20px;
 }
 
 .weather-box .temperature{
@@ -78,7 +78,7 @@
     font-size: 64px;
     line-height: 1;
     font-weight: 700;
-    margin: 20px 0 6px -30px;
+    margin: 0 0 6px -30px;
 }
 
 .weather-box .temperature span{
@@ -91,5 +91,69 @@
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
-    /* padding-right: 22px; */
+    padding-right: 22px;
+    margin-top: 10px;
+}
+
+.weather-details{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+}
+
+.weather-details .humidity,
+.weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    /* transform: translateY(-100%); */
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.icon{
+    font-size: 56px;
+    margin-right: 10px;
+    padding-top: 15px;
+}
+
+.weather-details span{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.not-found img{
+    width: 65%;
+}
+
+.not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
 }
