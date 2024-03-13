@@ -33,6 +33,13 @@ const Weather_app = () => {
     }
   }
 
+  const keyPress = (e)=>{
+    if(e.key === "Enter"){
+      fetchData();
+    }
+  }
+
+
 
   return (
     <div className='container'>
@@ -40,7 +47,7 @@ const Weather_app = () => {
         <div className='map'> 
           <FaMapMarkerAlt />
         </div>
-        <input type="text" value = {City} onChange = {handleOnChange} placeholder="Enter Your Location" />
+        <input type="text" value={City} onChange={handleOnChange} onKeyDown={keyPress} placeholder="Enter Your Location" />
         <button onClick={()=>fetchData()}>
           <FaSearch />
         </button>
@@ -65,7 +72,7 @@ const Weather_app = () => {
               <div className="box">
                 <div className="info-weather">
                   <div className="weather">
-                    <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} className='new-image'/>
+                    <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} className='new-image' alt={weather.weather[0].main}/>
                     <p className="temperature">{parseInt(weather.main.temp)}<span>°C</span></p>
                     <p className="description">{weather.weather[0].description}</p>
                   </div>
