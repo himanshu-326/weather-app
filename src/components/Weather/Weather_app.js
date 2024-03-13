@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import './Weather_app.css'
 import notFound from '../asset/404.png'
 import { FaSearch } from 'react-icons/fa'
@@ -16,7 +16,6 @@ const Weather_app = () => {
   const handleOnChange = (event)=>{
     setCity(event.target.value);
   }
-
   async function fetchData(){
     try {
       let response = await fetch(url);
